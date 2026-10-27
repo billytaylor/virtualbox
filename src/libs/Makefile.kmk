@@ -1,4 +1,4 @@
-# $Id: Makefile.kmk 115255 2026-09-14 08:53:42Z aleksey.ilyushin@oracle.com $
+# $Id: Makefile.kmk 115370 2026-10-15 17:54:32Z aleksey.ilyushin@oracle.com $
 ## @file
 # Top-level makefile for the external libraries.
 #
@@ -84,7 +84,7 @@ endif
 # libslirp for NAT
 if   !defined(VBOX_ONLY_BUILD) \
   && "$(intersects $(KBUILD_TARGET_ARCH),$(VBOX_SUPPORTED_HOST_ARCHS))" != ""
- include $(PATH_SUB_CURRENT)/libslirp-4.9.3/Makefile.kmk
+ include $(PATH_SUB_CURRENT)/libslirp-4.9.5/Makefile.kmk
 endif
 
 # libssh for cloud integration.
@@ -183,8 +183,8 @@ if   defined(VBOX_WITH_MAIN) \
 
   # libpng for screenshots in main.
   if   !defined(VBOX_ONLY_DOCS) \
-    && "$(SDK_VBoxLibPng_INCS)" == "$(PATH_ROOT)/src/libs/libpng-1.6.57"
-   include $(PATH_SUB_CURRENT)/libpng-1.6.57/Makefile.kmk
+    && "$(SDK_VBoxLibPng_INCS)" == "$(PATH_ROOT)/src/libs/libpng-1.6.59"
+   include $(PATH_SUB_CURRENT)/libpng-1.6.59/Makefile.kmk
   endif
 
 
